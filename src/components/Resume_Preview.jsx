@@ -4,11 +4,19 @@ const Resume_Preview = ({ name, role, about }) => {
             <h2>Resume Preview</h2>
 
             <div className="resume-content">
-                <h1>{name || "Your Name"}</h1>
-                <h3>{role || "Your Role"}</h3>
+                {/* Name Section */}
+                <div className="resume-section name-section">
+                    <h1>{name || "Your Name"}</h1>
+                    <h3>{role || "Your Role"}</h3>
+                </div>
 
-                <h4>About</h4>
-                <p>{about || "Your introduction will appear here..."}</p>
+                {/* Divider */}
+                <div className="resume-divider"></div>
+
+                {/* About Section */}
+                <div className="resume-section about-section">
+                    <p>{about || "Your introduction will appear here..."}</p>
+                </div>
             </div>
         </div>
     );
